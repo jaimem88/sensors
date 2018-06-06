@@ -79,3 +79,13 @@ Building this file will generate a `cli.sensor.data` binary file
 ```sh
 go build ./cmd/cli.sensor.data/
 ```
+
+## Assumptions
+
+1. I decided to use `float64` to represent the temperature. The result may vary depending on where the program runs due to actual representation of floating point numbers. For a more accurate representation I would have used the [decimal package](https://github.com/shopspring/decimal)
+
+2. I did not implement my own Sort nor Round functions
+
+3. Reading a file into memory could be dangerous if it's too big and can cause a memory issue depending on the instance where it runs
+
+4. The `mode` function is not the most optimal implementation as various iterations over different arrays isn't the best approach. There is probably a better or more complicated mathematical solution to obtain that value
