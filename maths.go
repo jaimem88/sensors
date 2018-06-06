@@ -19,7 +19,7 @@ func average(in []float64) float64 {
 }
 
 // median gets the value in the middle of the array
-// for even number of values it will return the lesser value between the two middle ones
+// for even number of values it will return the greater value between the two middle ones
 func median(in []float64) float64 {
 	n := len(in)
 	if n == 0 {
