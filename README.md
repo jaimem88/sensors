@@ -80,6 +80,10 @@ Building this file will generate a `cli.sensor.data` binary file
 go build ./cmd/cli.sensor.data/
 ```
 
+## Vendoring
+
+Used `dep` for dependencies
+
 ## Assumptions
 
 1. I decided to use `float64` to represent the temperature. The result may vary depending on where the program runs due to actual representation of floating point numbers. For a more accurate representation I would have used the [decimal package](https://github.com/shopspring/decimal)
